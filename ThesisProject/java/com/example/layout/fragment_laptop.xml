@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".LaptopFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="56dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="56dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="96dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="136dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/laptopRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline5" />
+
+        <Button
+            android:id="@+id/sort_button"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/sort_icon"
+            android:text="@string/sort_button_text"
+            android:textColor="?textAppearanceBody1"
+            app:layout_constraintBottom_toTopOf="@+id/guideline5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guideline3"
+            tools:ignore="RtlHardcoded,TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/clear_sort_button"
+            android:layout_width="57dp"
+            android:layout_height="0dp"
+            android:drawableLeft="@drawable/clear_icon"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline5"
+            app:layout_constraintStart_toEndOf="@+id/sort_button"
+            app:layout_constraintTop_toBottomOf="@+id/guideline3"
+            tools:ignore="RtlHardcoded,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/filter_button"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:drawableLeft="@drawable/filter_icon"
+            android:text="@string/filter_button_text"
+            android:textColor="?textAppearanceBody1"
+            android:layout_marginRight="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline5"
+            app:layout_constraintEnd_toStartOf="@+id/clear_filter_button"
+            app:layout_constraintTop_toBottomOf="@+id/guideline3"
+            tools:ignore="RtlHardcoded,TextContrastCheck,TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/clear_filter_button"
+            android:layout_width="57dp"
+            android:layout_height="0dp"
+            android:layout_marginRight="10dp"
+            android:drawableLeft="@drawable/clear_icon"
+            app:layout_constraintBottom_toTopOf="@+id/guideline5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guideline3"
+            tools:ignore="RtlHardcoded,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/lowest_value_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/highest_value_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SearchView
+            android:id="@+id/laptop_search_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:queryHint="@string/search_hint"
+            android:iconifiedByDefault="false"
+            app:layout_constraintBottom_toTopOf="@+id/guideline3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

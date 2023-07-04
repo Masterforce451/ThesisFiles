@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/drawer_favourites"
+        android:icon="@drawable/favourites_icon"
+        android:iconTint="?colorOnPrimary"
+        android:title="@string/favourites"/>
+    <item
+        android:id="@+id/drawer_settings"
+        android:icon="@drawable/settings_icon"
+        android:iconTint="?colorOnPrimary"
+        android:title="@string/settings"/>
+
+    <item
+        android:title="@string/navigation_title">
+        <menu>
+            <item
+                android:id="@+id/drawer_recomendationWizard"
+                android:icon="@drawable/recommendationwizard_icon"
+                android:iconTint="?colorOnPrimary"
+                android:title="@string/recommendation_wizard"/>
+            <item
+                android:id="@+id/drawer_cpu"
+                android:icon="@drawable/cpu_icon"
+                android:iconTint="?colorOnPrimary"
+                android:title="@string/looking_for_CPU"/>
+            <item
+                android:id="@+id/drawer_gpu"
+                android:icon="@drawable/gpu_icon"
+                android:iconTint="?colorOnPrimary"
+                android:title="@string/looking_for_GPU"/>
+            <item
+                android:id="@+id/drawer_laptop"
+                android:icon="@drawable/laptop_icon"
+                android:iconTint="?colorOnPrimary"
+                android:title="@string/looking_for_laptops"/>
+        </menu>
+    </item>
+</menu>

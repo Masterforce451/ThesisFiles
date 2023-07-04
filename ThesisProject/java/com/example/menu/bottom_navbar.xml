@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navbar_cpu"
+        android:title="@string/cpu"
+        android:icon="@drawable/cpu_icon" />
+    <item
+        android:id="@+id/navbar_gpu"
+        android:title="@string/gpu"
+        android:icon="@drawable/gpu_icon" />
+    <item
+        android:id="@+id/navbar_home"
+        android:title="@string/home"
+        android:icon="@drawable/home_icon" />
+    <item
+        android:id="@+id/navbar_laptop"
+        android:title="@string/laptop"
+        android:icon="@drawable/laptop_icon" />
+    <item
+        android:id="@+id/navbar_recommendation"
+        android:title="@string/recommender_navbar"
+        android:icon="@drawable/recommendationwizard_icon" />
+</menu>

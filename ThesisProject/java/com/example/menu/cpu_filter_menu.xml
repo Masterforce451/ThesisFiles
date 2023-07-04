@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/intel"
+        android:title="@string/intel_cpus" />
+    <item
+        android:id="@+id/amd"
+        android:title="@string/amd_cpus" />
+    <item
+        android:id="@+id/price_range_selection"
+        android:title="@string/price_range_selection" />
+</menu>

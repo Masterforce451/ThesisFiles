@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    tools:ignore="RtlHardcoded">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/cpu_turbo_speed_value"
+        app:layout_constraintStart_toStartOf="@+id/cpu_turbo_speed_value">
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.35" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.7" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.92" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.02" />
+        <ImageView
+            android:id="@+id/cpu_photo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline4"
+            tools:ignore="ContentDescription,ImageContrastCheck"
+            tools:srcCompat="@tools:sample/avatars" />
+        <TextView
+            android:id="@+id/cpu_model"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="?textAppearanceBody1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintEnd_toStartOf="@id/guideline3"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlSymmetry" />
+        <TextView
+            android:id="@+id/price_lowest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:paddingBottom="5dp"
+            android:text="@string/price_lowest_menu_text"
+            android:textColor="?textAppearanceBody1"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/guideline4"/>
+        <TextView
+            android:id="@+id/price_average"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:text="@string/price_average_menu_text"
+            android:textColor="?textAppearanceBody1"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/price_lowest" />
+        <TextView
+            android:id="@+id/price_lowest_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:textColor="?textAppearanceBody1"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="@+id/guideline4"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/price_average_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:textColor="?textAppearanceBody1"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/price_lowest_value"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/cpu_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:text="@string/cpu_speed_menu_text"
+            android:textColor="?textAppearanceBody1"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/price_average"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/cpu_speed_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:textColor="?textAppearanceBody1"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/price_average_value"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/cpu_turbo_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cpu_turbo_speed_menu_text"
+            android:paddingBottom="5dp"
+            android:textColor="?textAppearanceBody1"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/cpu_speed"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/cpu_turbo_speed_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?textAppearanceBody1"
+            android:paddingBottom="5dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/cpu_speed_value"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/cpu_score_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?textAppearanceBody1"
+            android:paddingBottom="5dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/cpu_turbo_speed_value"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/product_page_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/page_link"
+            android:textColor="?textAppearanceBody1"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/cpu_score" />
+
+        <TextView
+            android:id="@+id/similar_item_url"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:autoLink="web"
+            android:minHeight="48dp"
+            android:textIsSelectable="true"
+            app:layout_constraintEnd_toEndOf="@+id/favourite_button"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toBottomOf="@+id/product_page_link"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/favourite_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/round_button"
+            android:backgroundTint="?colorPrimary"
+            android:drawableTop="@drawable/favourite_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/cpu_photo"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/cpu_model"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/primary_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/cpu_model"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cpu_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cpu_score_menu_text"
+            android:textColor="?textAppearanceBody1"
+            android:paddingBottom="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/product_page_link"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/cpu_turbo_speed" />
+
+        <TextView
+            android:id="@+id/textView46"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toTopOf="@+id/guideline4"
+            tools:ignore="HardcodedText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

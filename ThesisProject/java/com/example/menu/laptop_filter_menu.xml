@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/cpus"
+        android:title="@string/cpus" >
+        <menu >
+            <item
+                android:id="@+id/intel"
+                android:title="@string/intel_cpus" />
+            <item
+                android:id="@+id/amd"
+                android:title="@string/amd_cpus" />
+            <item
+                android:id="@+id/apple_cpus"
+                android:title="@string/apple_cpus" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/gpus"
+        android:title="@string/nvidia" >
+        <menu >
+            <item
+                android:id="@+id/nvidia_gtx"
+                android:title="@string/nvidia_gtx" />
+            <item
+                android:id="@+id/nvidia_rtx2000"
+                android:title="@string/nvidia_rtx2000" />
+            <item
+                android:id="@+id/nvidia_rtx3000"
+                android:title="@string/nvidia_rtx3000" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/price_range_selection"
+        android:title="@string/price_range_selection" />
+</menu>

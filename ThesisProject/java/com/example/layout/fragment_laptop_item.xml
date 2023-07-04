@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contentDescription="@string/app_name"
+    android:layout_marginTop="56dp"
+    android:layout_marginBottom="56dp"
+    tools:context="GPUItemFragment"
+    android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.47" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.95" />
+
+            <ImageView
+                android:id="@+id/laptop_photo"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:contentDescription="@string/cpu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/laptop_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/laptop_photo" />
+
+            <Button
+                android:id="@+id/favourite_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:backgroundTint="?colorPrimary"
+                android:drawableTop="@drawable/favourite_icon"
+                android:background="@drawable/round_button"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintStart_toEndOf="@+id/laptop_photo"
+                app:layout_constraintTop_toTopOf="@+id/laptop_photo"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/compare_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/round_button"
+                android:drawableTop="@drawable/compare_icon"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintStart_toEndOf="@+id/laptop_photo"
+                app:layout_constraintTop_toBottomOf="@+id/favourite_button"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/price_info"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@id/laptop_name" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/price_lowest_menu_text"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+            <TextView
+                android:id="@+id/laptop_price_lowest_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@id/laptop_name" />
+
+            <TextView
+                android:id="@+id/laptop_average_price_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/laptop_price_lowest_value" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/price_average_menu_text"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/page_link"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+            <TextView
+                android:id="@+id/laptop_page_link"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autoLink="web"
+                android:minHeight="48dp"
+                android:textColor="?textAppearanceBody1"
+                android:textIsSelectable="true"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/guideline6"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView25"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/technical_details"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/laptop_page_link" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cpu_model"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView41" />
+
+            <TextView
+                android:id="@+id/cpu_model_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/operating_system_value" />
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/similar_products"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/laptop_page_similar_items"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView33" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cpu_score_menu_text"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView45" />
+
+            <TextView
+                android:id="@+id/cpu_score_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/core_amount_value" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/gpu_model"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+            <TextView
+                android:id="@+id/gpu_model"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/cpu_score_value" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/gpu_score_menu_text"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+            <TextView
+                android:id="@+id/gpu_score_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/gpu_model" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/ram"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+            <TextView
+                android:id="@+id/ram_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/gpu_score_value" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                android:text="@string/screen_size"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+            <TextView
+                android:id="@+id/screen_size_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/ram_value" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/screen_resolution"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+            <TextView
+                android:id="@+id/screen_resolution_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/screen_panel_type_value" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                android:text="@string/screen_resolution_type"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+            <TextView
+                android:id="@+id/screen_resolution_type_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/screen_resolution_value" />
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                android:text="@string/ssd"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+            <TextView
+                android:id="@+id/ssd_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/screen_resolution_type_value" />
+
+            <TextView
+                android:id="@+id/textView37"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                android:text="@string/hdd"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
+            <TextView
+                android:id="@+id/hdd_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/ssd_value" />
+
+            <TextView
+                android:id="@+id/textView39"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                android:text="@string/weight"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+            <TextView
+                android:id="@+id/weight_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/hdd_value" />
+
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/operating_system"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+            <TextView
+                android:id="@+id/operating_system_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cpu_clock_speeds"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+            <TextView
+                android:id="@+id/cpu_clock_speeds_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/cpu_model_value" />
+
+            <TextView
+                android:id="@+id/textView45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/core_amount"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView43" />
+
+            <TextView
+                android:id="@+id/core_amount_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/cpu_clock_speeds_value" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/screen_panel_type"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+            <TextView
+                android:id="@+id/screen_panel_type_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?textAppearanceBody1"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/screen_size_value" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
