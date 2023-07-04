@@ -1,1 +1,1 @@
-Bu repository tezimiz hakkında kullandığımız dosyaları paylaşmak için açılmıştır.
+  Üniversite bitirme tezi için geliştirdiğim Android platformunda Java kullanılarak yazılan mobil uygulama dosyaları. Tez kapsamında, ürün veritabanı için tez arkadaşım [@99eren99] tarafından Python dilinde yazılan bir web kazıma API'ı ve benim tarafımdan geliştirilen Java tabanlı android uygulama kullanıldı.
